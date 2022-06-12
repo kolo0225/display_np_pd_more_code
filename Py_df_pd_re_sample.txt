@@ -47,12 +47,12 @@ if (count == 0):
 n = 6
 # part i
 # -------
-excel_to_check_df1 = 0   # create file or not
+excel_to_check_df1   = 0   # create file or not
 list_to_text_allow   = 0   # create file or not
 
 # part ii
 # ------
-Auto_glob_dir          = 0    # run function or not
+Auto_glob_dir        = 0    # run function or not
 
 # (((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
 # (((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
@@ -63,7 +63,7 @@ Auto_glob_dir          = 0    # run function or not
 #                                             -------------------------------------
 #-------
 # part i -(df_used1)
-#	- starts - Produces file.txt from "excel1" 
+#	 - starts - Produces file.txt from "excel1" 
 #          -> df_used1_path_all, df_used1_path_jr, df_used1_path_other; df_used1_sig_all 
 #-------
 # 1a. df = importsDataFrameFromXl (path, sheetname, colRange, n_rows)
@@ -71,7 +71,7 @@ colRange   = 'A:B,E:G'
 n_rows     = 190
 # --
 # 1b. def reapeat_adds_df_row (df, Gen_name, name1,name2,name3,name4):
-Gen_name = 'A1'
+Gen_name = 'root_name'
 name1    = 'A2'
 name2    = 'A3'
 name3    = 'A4'
@@ -87,13 +87,13 @@ col_name= '1_hash'
 # --
 # 2a. def write_list_to_text (list_, path, open_):
 open_df1_all    = 0;  # or any if do not want to open
-open_df1_jr    = 0;  # or any if do not want to open
-open_df1_other    = 0;  # or any if do not want to open 
+open_df1_jr     = 0;  # or any if do not want to open
+open_df1_other  = 0;  # or any if do not want to open 
 
 # =======================================================================================================================
 #-------
 # part ii -(VFP from dir)
-#	- Uses  'df_used1_path_jr.txt' (from part i) 
+#	  - Uses  'df_used1_path_jr.txt' (from part i) 
 #		-> fishes for file in their_dir & writes 'files_path.txt'
 #			& -> compares lists 'pc_list_reverse' vs 'df_used1_path_jr'
 #-------
@@ -105,18 +105,18 @@ open_files_path     = 0;  # or any if do not want to open
 
 # --
 #  USE THIS WHEN 'find_path_list' NOT THE SAME AS 'df_used1_path_jr' 
-ep	& NEED TO ADD TO ENTRIES MANUALLY TO ('files_path.txt') 
+	& NEED TO ADD TO ENTRIES MANUALLY TO ('files_path.txt') 
 #	in order to recreate the correct 'find_path_list'
 # 1c.def read_path (path):
 # --
-ignatures 1d. def shorterns_path (list_):
+# 1d. def shorterns_path (list_):
 # --
 # 2a. def list_reverse_N_compare (pc_list , df_used1_path_jr, phraseA_NOT1, phraseA_NOT2, phraseB_NOT1,phraseB_NOT2 ):
 
 # =======================================================================================================================
 #-------
 # part iii -(VFP from from 'macro...xlsm' (after VFP runs )
-#	- starts -> VFP (MANUAL) 
+#      	- starts -> VFP (MANUAL) 
 #		-> compares lists 'VRF_reverse_list' vs 'df_used1_path_jr'
 #-------
 # 1. ##############################################################################################
@@ -145,7 +145,7 @@ ignatures 1d. def shorterns_path (list_):
 # 1. ##############################################################################################
 # 1a. def manipulate_df_to_PT (df):
 #df_1st,df_2nd,df_3rd,df_4th,df_5th,df_6th,df_7th,df_8th,df_9th,df_10th, \
-#		df_11th,df_A1_A2,df_A1_A3,df_A1_A4,df_A1_A5,df_16th,df_17th = manipulate_df_to_PT (df)
+#		df_11th,df_root_name_A2,df_root_name_A3,df_root_name_A4,df_root_name_A5,df_16th,df_17th = manipulate_df_to_PT (df)
 # --
 # 1b. def write_df_list_to_text (df, col_one, col_two, path, sudo, open_):
 open_1st                = 0                 
@@ -154,17 +154,17 @@ open_3rd                = 0
 open_4th                = 0 
 open_5th                = 0 
 open_6th                = 0 
-open_7th              = 0 
-open_8th                 = 0 
-open_9th   = 0 
-open_10th        = 0 
-open_11th         = 0 
-open_A1_A2            = 0 
-open_A1_A3           = 0 
-open_A1_A4           = 0 
-open_A1_A5       = 0 
-open_16th         = 0 
-open_17th            = 0 
+open_7th                = 0 
+open_8th                = 0 
+open_9th                = 0 
+open_10th               = 0 
+open_11th               = 0 
+open_root_name_A2       = 0 
+open_root_name_A3       = 0 
+open_root_name_A4       = 0 
+open_root_name_A5       = 0 
+open_16th               = 0 
+open_17th               = 0 
 
 # --
 # 2. ##############################################################################################
@@ -224,7 +224,7 @@ open_17th            = 0
 # ----
 # 1a. def merge_col_together (df1, df2, add_col):
 # 1b. def df_to_excel (df, path, sheet, open_): ( Createed at part i, 1c.)
-open_xlsx_VRF = 0;  # or any if do not want to open
+open_xlsx_VRF     = 0;  # or any if do not want to open
 open_xlsx_df_used1= 0;  # or any if do not want to open
 # --------------------------------------------------------------------------------------------------------------------
 # =======================================================================================================================
@@ -233,17 +233,7 @@ open_xlsx_df_used1= 0;  # or any if do not want to open
 #-------
 # part Viii - moves files.txt to subdirectories
 # 1a. def copy_listOFfile_into_dir (file_name_list, path, child_dir):
-# 1b. def copy_listOFfile_into_dir (file_name_list, path, child_dir): (created @ part ix 1a.)
 #-------
-# --------------------------------------------------------------------------------------------------------------------
-# =======================================================================================================================
-# =======================================================================================================================
-
-# ----
-# part viii - starts (copies files to be save & ziped in to their own directories)
-# ----
-# 1a. def copy_listOFfile_into_dir (file_name_list, path, child_dir):
-# --
 # 1b. def ziping_dir (dir):
 
 # =======================================================================================================================
@@ -265,7 +255,6 @@ open_xlsx_df_used1= 0;  # or any if do not want to open
 # 1a. def importsDataFrameFromXl (path, sheetname, colRange, n_rows):
 #df = importsDataFrameFromXl (path_Releases1, sheetname, colRange, n_rows)
 path_Releases1       = os.path.split(os.getcwd())[1]+"excel1"  # use this
-#path_Releases1       = 'VERSION_PATHexcel1'                 # TO BE ERASE 
 sheetname  = 'Sheet1' 
 colRange   = colRange                    # 'A' is column 'A' 'A:K'
 n_rows     = n_rows
@@ -299,9 +288,9 @@ path_df1_all = 'df_used1_path_all.txt'
 path_df1_jr = 'df_used1_path_jr.txt'
 path_df1_other = 'df_used1_path_other.txt'
 
-open_df1_all    = open_df1_all;  # or any if do not want to open
-open_df1_jr    = open_df1_jr;  # or any if do not want to open
-open_df1_other    = open_df1_other;  # or any if do not want to open 
+open_df1_all    = open_df1_all;    # or any if do not want to open
+open_df1_jr     = open_df1_jr;     # or any if do not want to open
+open_df1_other  = open_df1_other;  # or any if do not want to open 
 
 # =======================================================================================================================
 #-------
@@ -387,28 +376,27 @@ phraseB_NOT2_V       = '\nis in VRF_path_list  but not in df_used1_path_jr\n'
 # 1. ##############################################################################################
 # 1a. def manipulate_df_to_PT (df):
 #df_1st,df_2nd,df_3rd,df_4th,df_5th,df_6th,df_7th,df_8th,df_9th,df_10th, \
-#		df_11th,df_A1_A2,df_A1_A3,df_A1_A4,df_A1_A5,df_16th,df_17th = manipulate_df_to_PT (df)
+#		df_11th,df_root_name_A2,df_root_name_A3,df_root_name_A4,df_root_name_A5,df_16th,df_17th = manipulate_df_to_PT (df)
 
 # 1b. def write_df_list_to_text (df, col_one, col_two, path, sudo, open_):
 # call fn -> creates 'from_PT_................txt'
-#write_df_list_to_text (df_1st,                  'col1_name','col2_name','PT_1st.txt'                  , sudo_1st,              open_1st)
-#write_df_list_to_text (df_2nd,                  'col1_name','col2_name','PT_2nd.txt'                  , sudo_2nd,              open_2nd)
-#write_df_list_to_text (df_3rd,                  'col1_name','col2_name','PT_3rd.txt'                  , sudo_3rd,              open_3rd)
-#write_df_list_to_text (df_4th,                  'col1_name','col2_name','PT_4th.txt'                  , sudo_4th,              open_4th)
-#write_df_list_to_text (df_5th,                  'col1_name','col2_name','PT_5th.txt'                  , sudo_5th,              open_5th)
-#write_df_list_to_text (df_6th,                  'col1_name','col2_name','PT_6th.txt'                  , sudo_6th,              open_6th)
-#write_df_list_to_text (df_7th,                'col1_name','col2_name','PT_7th.txt'                , sudo_7th,            open_7th)
-#write_df_list_to_text (df_8th,          'col1_name','col2_name','PT_8th.txt'          , sudo_8th,               open_8th)
-#write_df_list_to_text (df_9th,'col1_name','col2_name','PT_9th.txt', sudo_9th, open_9th)
-#write_df_list_to_text (df_10th,     'col1_name','col2_name','PT_10th.txt'     , sudo_10th,      open_10th)
-#write_df_list_to_text (df_11th,      'col1_name','col2_name','PT_11th.txt'      , sudo_11th,       open_11th)
-#write_df_list_to_text (df_A1_A2,              'col1_name','col2_name','PT_A1_A2.txt'              , sudo_A1_A2,          open_A1_A2)
-#write_df_list_to_text (df_A1_A3,             'col1_name','col2_name','PT_A1_A3.txt'             , sudo_A1_A3,         open_A1_A3)
-#write_df_list_to_text (df_A1_A4,        'col1_name','col2_name','PT_A1_A4.txt'        , sudo_A1_A4,         open_A1_A4)
-#write_df_list_to_text (df_A1_A5,         'col1_name','col2_name','PT_A1_A5.txt'         , sudo_A1_A5,     open_A1_A5)
-#write_df_list_to_text (df_16th,    'col1_name','col2_name','PT_16th.txt'    , sudo_16th,       open_16th)
-#write_df_list_to_text (df_17th,    'col1_name','col2_name','PT_17th.txt'    , sudo_17th,          open_17th)
-PT_16th#-
+#write_df_list_to_text (df_1st,         'col1_name','col2_name','PT_1st.txt'          , sudo_1st,            open_1st)
+#write_df_list_to_text (df_2nd,         'col1_name','col2_name','PT_2nd.txt'          , sudo_2nd,            open_2nd)
+#write_df_list_to_text (df_3rd,         'col1_name','col2_name','PT_3rd.txt'          , sudo_3rd,            open_3rd)
+#write_df_list_to_text (df_4th,         'col1_name','col2_name','PT_4th.txt'          , sudo_4th,            open_4th)
+#write_df_list_to_text (df_5th,         'col1_name','col2_name','PT_5th.txt'          , sudo_5th,            open_5th)
+#write_df_list_to_text (df_6th,         'col1_name','col2_name','PT_6th.txt'          , sudo_6th,            open_6th)
+#write_df_list_to_text (df_7th,         'col1_name','col2_name','PT_7th.txt'          , sudo_7th,            open_7th)
+#write_df_list_to_text (df_8th,         'col1_name','col2_name','PT_8th.txt'          , sudo_8th,            open_8th)
+#write_df_list_to_text (df_9th,         'col1_name','col2_name','PT_9th.txt'          , sudo_9th,            open_9th)
+#write_df_list_to_text (df_10th,        'col1_name','col2_name','PT_10th.txt'         , sudo_10th,           open_10th)
+#write_df_list_to_text (df_11th,        'col1_name','col2_name','PT_11th.txt'         , sudo_11th,           open_11th)
+#write_df_list_to_text (df_root_name_A2,'col1_name','col2_name','PT_root_name_A2.txt' , sudo_root_name_A2,   open_root_name_A2)
+#write_df_list_to_text (df_root_name_A3,'col1_name','col2_name','PT_root_name_A3.txt' , sudo_root_name_A3,   open_root_name_A3)
+#write_df_list_to_text (df_root_name_A4,'col1_name','col2_name','PT_root_name_A4.txt' , sudo_root_name_A4,   open_root_name_A4)
+#write_df_list_to_text (df_root_name_A5,'col1_name','col2_name','PT_root_name_A5.txt' , sudo_root_name_A5,   open_root_name_A5)
+#write_df_list_to_text (df_16th,        'col1_name','col2_name','PT_16th.txt'         , sudo_16th,           open_16th)
+#write_df_list_to_text (df_17th,        'col1_name','col2_name','PT_17th.txt'         , sudo_17th,           open_17th)
 
 # inputs
 # --
@@ -423,10 +411,10 @@ sudo_8th                = 0
 sudo_9th                = 0 
 sudo_10th               = 0
 sudo_11th               = 0 
-sudo_A1_A2              = 0 
-sudo_A1_A3              = 0 
-sudo_A1_A4              = 0 
-sudo_A1_A5              = 0 
+sudo_root_name_A2       = 0 
+sudo_root_name_A3       = 0 
+sudo_root_name_A4       = 0 
+sudo_root_name_A5       = 0 
 sudo_16th               = 0 
 sudo_17th               = 0 
 # --
@@ -463,10 +451,10 @@ sudo_17th               = 0
 #PT_path_9th, PT_sig_9th                                         = CleanVerCode (F9_in ,delimiter1,delimiter2)
 #PT_path_10th, PT_sig_10th                                       = CleanVerCode (F10_in,delimiter1,delimiter2)
 #PT_path_11th, PT_sig_11th                                       = CleanVerCode (F11_in,delimiter1,delimiter2)
-#PT_path_A1_A2, PT_sig_A1_A2                                     = CleanVerCode (F12_in,delimiter1,delimiter2)
-#PT_path_A1_A3, PT_sig_A1_A3                                     = CleanVerCode (F13_in,delimiter1,delimiter2)
-#PT_path_A1_A4, PT_sig_A1_A4                                     = CleanVerCode (F14_in,delimiter1,delimiter2)
-#PT_path_A1_A5, PT_sig_A1_A5                                     = CleanVerCode (F15_in,delimiter1,delimiter2)
+#PT_path_root_name_A2, PT_sig_root_name_A2                       = CleanVerCode (F12_in,delimiter1,delimiter2)
+#PT_path_root_name_A3, PT_sig_root_name_A3                       = CleanVerCode (F13_in,delimiter1,delimiter2)
+#PT_path_root_name_A4, PT_sig_root_name_A4                       = CleanVerCode (F14_in,delimiter1,delimiter2)
+#PT_path_root_name_A5, PT_sig_root_name_A5                       = CleanVerCode (F15_in,delimiter1,delimiter2)
 #PT_path_16th, PT_sig_16th                                       = CleanVerCode (F16_in,delimiter1,delimiter2)
 #PT_path_17th, PT_sig_17th                                       = CleanVerCode (F17_in,delimiter1,delimiter2)
 
@@ -484,10 +472,10 @@ F8_in  = 'from_PT_8th.txt'
 F9_in  = 'from_PT_9th.txt'
 F10_in = 'from_PT_10th.txt'
 F11_in = 'from_PT_11th.txt'
-F12_in = 'from_PT_A1_A2.txt'
-F13_in = 'from_PT_A1_A3.txt'
-F14_in = 'from_PT_A1_A4.txt' 
-F15_in = 'from_PT_A1_A5.txt'
+F12_in = 'from_PT_root_name_A2.txt'
+F13_in = 'from_PT_root_name_A3.txt'
+F14_in = 'from_PT_root_name_A4.txt' 
+F15_in = 'from_PT_root_name_A5.txt'
 F16_in = 'from_PT_16th.txt'
 F17_in = 'from_PT_17th.txt'
 # --
@@ -501,11 +489,11 @@ F17_in = 'from_PT_17th.txt'
 #list_PT_sig_jr = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th]
 #list_PT_path_all = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th, 
 #			PT_path_7th, PT_path_8th, PT_path_9th,PT_path_10th,PT_path_11th,
-#			 PT_path_A1_A2, PT_path_A1_A3, PT_path_A1_A4, PT_path_A1_A5,
+#			 PT_path_root_name_A2, PT_path_root_name_A3, PT_path_root_name_A4, PT_path_root_name_A5,
 #			PT_path_16th, PT_path_17th]
 #list_PT_sig_all = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th,
 #			PT_sig_7th, PT_sig_8th, PT_sig_9th, PT_sig_10th,PT_sig_11th,
-#			 PT_sig_A1_A2, PT_sig_A1_A3, PT_sig_A1_A4, PT_sig_A1_A5,
+#			 PT_sig_root_name_A2, PT_sig_root_name_A3, PT_sig_root_name_A4, PT_sig_root_name_A5,
 #			PT_sig_16th, PT_sig_17th]
 
 # --
@@ -630,8 +618,8 @@ child_dir_sig  = '\\directory1' # ADJUST DIRECTORY & THEREFORE PATH by eliminati
 file_name_list_var = ['from_PT_1st.txt', 'from_PT_2nd.txt', 'from_PT_3rd.txt',
 	'from_PT_4th.txt', 'from_PT_5th.txt','from_PT_6th.txt',
  	'from_PT_7th.txt', 'from_PT_8th.txt', 'from_PT_9th.txt',
- 	'from_PT_10th.txt', 'from_PT_11th.txt', 'from_PT_A1_A2.txt',
- 	'from_PT_A1_A3.txt', 'from_PT_A1_A4.txt', 'from_PT_A1_A5.txt',
+ 	'from_PT_10th.txt', 'from_PT_11th.txt', 'from_PT_root_name_A2.txt',
+ 	'from_PT_root_name_A3.txt', 'from_PT_root_name_A4.txt', 'from_PT_root_name_A5.txt',
  	'from_PT_16th.txt', 'from_PT_17th.txt']
 
 #path_current   -->   (created @ part ix 1a.)
@@ -702,22 +690,11 @@ def importsDataFrameFromXl (path, sheetname, colRange, n_rows):
 
 	return df
 
-# -------------------------------------------------------------------
-#path_Releases1       = os.path.split(os.getcwd())[1]+"excel1"
-#path_Releases1       = 'VERSION_PATHexcel1'
-#sheetname  = 'Sheet1' 
-#colRange   = 'A:B,E:G'                    # 'A' is column 'A' 'A:K'
-#n_rows     = 190
-# -----		-------		----------		----------------------
-
-df = importsDataFrameFromXl (path_Releases1, sheetname, colRange, n_rows)
-# ----------------------------------------------------------------------------	
-
-# 1b. repeats all df_rows for A1 (A2, A3, A4, A5)
+# 1b. repeats all df_rows for root_name (A2, A3, A4, A5)
 #     creates a data frame with the repeated rows 
 def reapeat_adds_df_row (df, Gen_name, name1,name2,name3,name4):
 
-	# A1 (A2, A3, A4, A5)
+	# root_name (A2, A3, A4, A5)
 	pattern_rm    = re.compile(Gen_name+'\s?\(.*\)')
 	pattern_keep1 = Gen_name+'('+name1+')'
 	pattern_keep2 = Gen_name+'('+name2+')'
@@ -842,14 +819,6 @@ def reapeat_adds_df_row (df, Gen_name, name1,name2,name3,name4):
 	return df_all
 
 
-#Gen_name = 'A1'
-#name1    = 'A2'
-#name2    = 'A3'
-#name3    = 'A4'
-#name4    = 'A5'
-
-df = reapeat_adds_df_row (df, Gen_name,name1,name2,name3,name4)
-
 # 1c. create an excel sheet of 'Test_OTHER_Repeat.xlsx' to VRF looks right
 def df_to_excel (df, path, sheet, open_):
 	df.to_excel(excel_writer= path, sheet_name=sheet, na_rep='', index=False)
@@ -901,8 +870,6 @@ def excel1_paths (df):
 	
 	return df_used1_path_all, df_used1_path_jr, df_used1_path_other 
 
-df_used1_path_all, df_used1_path_jr, df_used1_path_other  = excel1_paths (df)
-
 # 1e. 
 # make lists out of dataframe
 # df -> df_used1_sig_all
@@ -935,19 +902,6 @@ def write_list_to_text (list_, path, open_):
 		os.system("start "+path)
 
 	return 
-
-#path_df1_all = 'df_used1_path_all.txt'
-#path_df1_jr = 'df_used1_path_jr.txt'
-#path_df1_other = 'df_used1_path_other.txt'
-
-#open_df1_all    = 0;  # or any if do not want to open
-#open_df1_jr    = 0;  # or any if do not want to open
-#open_df1_other    = 0;  # or any if do not want to open
-
-#if (list_to_text_allow   == 1):
-#	write_list_to_text (df_used1_path_all, path_df1_all, open_df1_all)
-#	write_list_to_text (df_used1_path_jr, path_df1_jr, open_df1_jr)
-#	write_list_to_text (df_used1_path_other, path_df1_other, open_df1_other)
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # part ii - Uses  'df_used1_path_jr.txt' (from part i) 
@@ -993,21 +947,6 @@ def find_dir_from_list (list_jr, path,version):
 	
 	return find_path_list 
 
-#version = os.path.split(os.getcwd())[1]
-#path_dir = r'C:\Users\Anastasios_K\Documents\PATHAA\PATHBB\\'+version+'\\**\\'
-
-# DO NOT USE FOR NOW
-#if (Auto_glob_dir  == 1):
-#	find_path_list =find_dir_from_list (df_used1_path_jr, path_dir, version) 
-	
-# 1b. - writes a 'files_path.txt' with full '.jr' path (created in 1f)
-#path_dir_full    = 'files_path.txt'
-#open_files_path  = open_files_path;  #1 or any if do not want to open
-
-#if (Auto_glob_dir  == 1):
-#	write_list_to_text (find_path_list, path_dir_full, open_files_path )
-
-
 # 1c. USE THIS WHEN 'find_path_list' NOT THE SAME AS df_used1_path_jr 
 #	& NEED TO ADD TO ENTRIES MANUALLY TO find_path_list
 #	THROUGH  'files_path.txt':
@@ -1024,9 +963,6 @@ def read_path (path):
 	#print(find_path_list.shape)
 	#print(find_path_list)
 	return find_path_list 
-
-#path_dir_auto = 'files_path.txt'
-#find_path_list =read_path (path_dir_auto)
 
 # 1d.  Shortens the path -> list of shorter paths
 # ....\\var\\app\\ppb-6th-service\\lib\\6th-mediation-1.0-SNAPSHOT.jr\n'
@@ -1092,15 +1028,6 @@ def list_reverse_N_compare (pc_list , df_used1_path_jr, phraseA_NOT1, phraseA_NO
 	
 	return pc_list_reverse
 
-
-#phraseA_NOT1_PC      = '\nDIFFERENCE:\npath: '
-#phraseA_NOT2_PC      = 'is in df_used1_path_jr but not in pc_list'
-#phraseB_NOT1_PC      = '\nDIFFERENCE:\npath: '
-#phraseB_NOT2_PC      = 'is in pc_list  but not in df_used1_path_jr'
-
-#pc_list_reverse = list_reverse_N_compare (pc_list , df_used1_path_jr, phraseA_NOT1_PC, phraseA_NOT2_PC, phraseB_NOT1_PC,phraseB_NOT2_PC )
-
-
 # Ends part ii
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -1129,21 +1056,6 @@ def importsDataFrameFromXl_iG (path_iG, sheetname_iG):
 
 	return df_VRF
 
-#path_iG       = os.path.split(os.getcwd())[1]+" macro Coversheet doc_type.xlsm"  # use this
-#sheetname_iG   = 'imp_sig'
-
-#df_VRF = importsDataFrameFromXl_iG  (path_iG, sheetname_iG)
-
-
-#  2b.make lists out of dataframe column (created in part i, 1e)
-# df_VRF -> VRF_path_list or VRF_sig_list
-
-#VRF_path_list = df_col_to_list(df_VRF, 'File Path')
-
-
-#print('---VRF_path_list---: \n', VRF_path_list)
-#print('---VRF_sig_list---: \n', VRF_sig_list)
-
 #  2c. truns VRF_sig_list CAP to small
 def list_cap_to_small (list_):
 	list_small = np.array([])
@@ -1155,10 +1067,7 @@ def list_cap_to_small (list_):
 
 	return list_small
 
-#list_VRF_small =list_cap_to_small (VRF_sig_list)
-
 #  2d. shortens list (similar but not identical to one in part i)
-
 def shorterns_ver_path (list_):
 
 	pattern_rm1 = r'\\.*\\var'
@@ -1177,26 +1086,12 @@ def shorterns_ver_path (list_):
 
 	return VRF_path_list
 
-#VRF_path_list = shorterns_ver_path (VRF_path_list)
-
-
-#  3a. compares VRF_reverse_list vs df_used1_path_jr BY changing '/' to '\'
-
-#phraseA_NOT1_V       = '\nDIFFERENCE:\npath: '
-#phraseA_NOT2_V       = '\nis in df_used1_path_jr but not in VRF_path_list\n'
-#phraseB_NOT1_V       = '\nDIFFERENCE:\npath: '
-#phraseB_NOT2_V       = '\nis in VRF_path_list  but not in df_used1_path_jr\n'
-
-#VRF_reverse_list = list_reverse_N_compare (VRF_path_list , df_used1_path_jr, phraseA_NOT1_V , phraseA_NOT2_V ,phraseB_NOT1_V ,phraseB_NOT2_V  )
-
 # Ends part iii of 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # part iv - starts 
-# # PT
-# uses 'COL1', 'col1_name', 'Path' from "excel1" -> created df for each 'COL1' 4tharate:
-
+# PT
 # 1. ##############################################################################################
 # 1a. 
 def manipulate_df_to_PT (df):
@@ -1207,7 +1102,7 @@ def manipulate_df_to_PT (df):
 	df_PT.drop(df_PT.columns[[2,3]], axis = 1, inplace = True)
 
 	# gets the unique col1_name items:
-	col1_name_name = np.array(df_PT['col1_name'].to_list())
+	col1_name_name    = np.array(df_PT['col1_name'].to_list())
 	col1_name_unique  = np.unique(col1_name_name)
 
 	#print (col1_name_unique)
@@ -1217,17 +1112,6 @@ def manipulate_df_to_PT (df):
 	COL1_unique  = np.unique(COL1_name)
 	
 	#print (COL1_unique)
-	
-	"""
-	['2ndfd' 'obadmfd' 'obdwfd' 'obfhexfd' 'obfhfmmfd' 'obfhtifd'
- 	'A2, A3, A4, A5' 'obstlfd' 'obtifd'
- 	'1stfd' '4thfd' '5thfd' '3rdfd' '6thfd']
-
-	['7th' '8th Reporter' 'Feed Handler Exchange' 'Feed Handler FMM'
- 	'Feed Handler TI' 'A1(A2)' 'A1(A3)' 'A1(A4)' 'A1(A5)'
- 	'16th Engine' '17th Interface' '2nd' '1st' '4th' '5th' '3rd'
- 	'6th']
-	"""
 
 	# creates df for all 'COL1' in df:
 	for comp in COL1_unique:
@@ -1277,20 +1161,20 @@ def manipulate_df_to_PT (df):
 		df_11th = df[mask_11th]
 		# --
 		#--
-		mask_A1_A2 = df_PT['COL1'] == COL1_unique[5]
-		df_A1_A2 = df[mask_A1_A2]
+		mask_root_name_A2 = df_PT['COL1'] == COL1_unique[5]
+		df_root_name_A2 = df[mask_root_name_A2]
 		# --
 		#--
-		mask_A1_A3 = df_PT['COL1'] == COL1_unique[6]
-		df_A1_A3 = df[mask_A1_A3]
+		mask_root_name_A3 = df_PT['COL1'] == COL1_unique[6]
+		df_root_name_A3 = df[mask_root_name_A3]
 		# --
 		#--
-		mask_A1_A4_Only = df_PT['COL1'] == COL1_unique[7]
-		df_A1_A4 = df[mask_A1_A4_Only]
+		mask_root_name_A4_Only = df_PT['COL1'] == COL1_unique[7]
+		df_root_name_A4 = df[mask_root_name_A4_Only]
 		# --
 		#--
-		mask_A1_A5 = df_PT['COL1'] == COL1_unique[8]
-		df_A1_A5 = df[mask_A1_A5]
+		mask_root_name_A5 = df_PT['COL1'] == COL1_unique[8]
+		df_root_name_A5 = df[mask_root_name_A5]
 		# --
 		#--
 		mask_16th = df_PT['COL1'] == COL1_unique[9]
@@ -1316,18 +1200,15 @@ def manipulate_df_to_PT (df):
 	#print('df_9th: \n', df_9th)
 	#print('df_10th: \n', df_10th)
 	#print('df_11th: \n', df_11th)
-	#print('df_A1_A2: \n', df_A1_A2)
-	#print('df_A1_A3: \n', df_A1_A3)
-	#print('df_A1_A4: \n', df_A1_A4)
-	#print('df_A1_A5: \n', df_A1_A5)
+	#print('df_root_name_A2: \n', df_root_name_A2)
+	#print('df_root_name_A3: \n', df_root_name_A3)
+	#print('df_root_name_A4: \n', df_root_name_A4)
+	#print('df_root_name_A5: \n', df_root_name_A5)
 	#print('df_16th: \n', df_16th)
 	#print('df_17th: \n', df_17th)
 	
 	return df_1st,df_2nd,df_3rd,df_4th,df_5th,df_6th,df_7th,df_8th,df_9th,df_10th, \
-		df_11th,df_A1_A2,df_A1_A3,df_A1_A4,df_A1_A5,df_16th,df_17th
-
-#df_1st,df_2nd,df_3rd,df_4th,df_5th,df_6th,df_7th,df_8th,df_9th,df_10th, \
-#		df_11th,df_A1_A2,df_A1_A3,df_A1_A4,df_A1_A5,df_16th,df_17th = manipulate_df_to_PT (df)
+		df_11th,df_root_name_A2,df_root_name_A3,df_root_name_A4,df_root_name_A5,df_16th,df_17th
 
 
 # 1b. writes 'PT_StepByStep.txt'
@@ -1363,67 +1244,6 @@ def write_df_list_to_text (df, col_one, col_two, path, sudo, open_):
 	
 	return 
 
-# inputs
-# --
-#sudo_1st                = 0                 
-#sudo_2nd                = 0 
-#sudo_3rd                = 0 
-#sudo_4th                = 0 
-#sudo_5th                = 0 
-#sudo_6th                = 0 
-#sudo_7th              = 0 
-#sudo_8th                 = 0 
-#sudo_9th   = 0 
-#sudo_10th        = 0 
-#sudo_11th         = 0 
-#sudo_A1_A2            = 0 
-#sudo_A1_A3           = 0 
-#sudo_A1_A4           = 0 
-#sudo_A1_A5       = 0 
-#sudo_16th         = 0 
-#sudo_17th            = 0 
-# --
-# --
-#open_1st                = 0                 
-#open_2nd                = 0 
-#open_3rd                = 0 
-#open_4th                = 0 
-#open_5th                = 0 
-#open_6th                = 0 
-#open_7th              = 0 
-#open_8th                 = 0 
-#open_9th   = 0 
-#open_10th        = 0 
-#open_11th         = 0 
-#open_A1_A2            = 0 
-#open_A1_A3           = 0 
-#open_A1_A4           = 0 
-#open_A1_A5       = 0 
-#open_16th         = 0 
-#open_17th            = 0 
-# --
-
-# call fn -> creates 'from_PT_................txt'
-#write_df_list_to_text (df_1st,                  'col1_name','col2_name','PT_1st.txt'                  , sudo_1st,              open_1st)
-#write_df_list_to_text (df_2nd,                  'col1_name','col2_name','PT_2nd.txt'                  , sudo_2nd,              open_2nd)
-#write_df_list_to_text (df_3rd,                  'col1_name','col2_name','PT_3rd.txt'                  , sudo_3rd,              open_3rd)
-#write_df_list_to_text (df_4th,                  'col1_name','col2_name','PT_4th.txt'                  , sudo_4th,              open_4th)
-#write_df_list_to_text (df_5th,                  'col1_name','col2_name','PT_5th.txt'                  , sudo_5th,              open_5th)
-#write_df_list_to_text (df_6th,                  'col1_name','col2_name','PT_6th.txt'                  , sudo_6th,              open_6th)
-#write_df_list_to_text (df_7th,                'col1_name','col2_name','PT_7th.txt'                , sudo_7th,            open_7th)
-#write_df_list_to_text (df_8th,          'col1_name','col2_name','PT_8th.txt'          , sudo_8th,               open_8th)
-#write_df_list_to_text (df_9th,'col1_name','col2_name','PT_9th.txt', sudo_9th, open_9th)
-#write_df_list_to_text (df_10th,     'col1_name','col2_name','PT_10th.txt'     , sudo_10th,      open_10th)
-#write_df_list_to_text (df_11th,      'col1_name','col2_name','PT_11th.txt'      , sudo_11th,       open_11th)
-#write_df_list_to_text (df_A1_A2,              'col1_name','col2_name','PT_A1_A2.txt'              , sudo_A1_A2,          open_A1_A2)
-#write_df_list_to_text (df_A1_A3,             'col1_name','col2_name','PT_A1_A3.txt'             , sudo_A1_A3,         open_A1_A3)
-#write_df_list_to_text (df_A1_A4,        'col1_name','col2_name','PT_A1_A4.txt'        , sudo_A1_A4,         open_A1_A4)
-#write_df_list_to_text (df_A1_A5,         'col1_name','col2_name','PT_A1_A5.txt'         , sudo_A1_A5,     open_A1_A5)
-#write_df_list_to_text (df_16th,    'col1_name','col2_name','PT_16th.txt'    , sudo_16th,       open_16th)
-#write_df_list_to_text (df_17th,    'col1_name','col2_name','PT_17th.txt'    , sudo_17th,          open_17th)
-
-# -> 'PT_StepByStep.txt'
-
 # 2. ##############################################################################################
 # 2. Uses 'PT_StepByStep.txt' and run PT (MANUAL)
 # -> output G_path.txt
@@ -1431,8 +1251,8 @@ def write_df_list_to_text (df, col_one, col_two, path, sudo, open_):
 #['from_PT_1st.txt', 'from_PT_2nd.txt', 'from_PT_3rd.txt',
 # 'from_PT_4th.txt', 'from_PT_5th.txt','from_PT_6th.txt',
 # 'from_PT_7th.txt', 'from_PT_8th.txt', 'from_PT_9th.txt',
-# 'from_PT_10th.txt', 'from_PT_11th.txt', 'from_PT_A1_A2.txt',
-# 'from_PT_A1_A3.txt', 'from_PT_A1_A4.txt', 'from_PT_A1_A5.txt',
+# 'from_PT_10th.txt', 'from_PT_11th.txt', 'from_PT_root_name_A2.txt',
+# 'from_PT_root_name_A3.txt', 'from_PT_root_name_A4.txt', 'from_PT_root_name_A5.txt',
 # 'from_PT_16th.txt', 'from_PT_17th.txt']
 # --------------------------------------------------------------
 
@@ -1455,13 +1275,7 @@ def write_df_list_to_text (df, col_one, col_two, path, sudo, open_):
 # ------------------------------------------------------------------
 #           text_cleaner_VRF3.txt
 # ----------------------------------------------------------------
-# Note:
-#	if paths do not match 
-#		-> find path missing
-#		-> 'manually' SHA from PT
-#		-> place it at proper section in 'file_dirty.txt'
-#		-> re-run and re-compare paths
-# 1a. 
+
 def CleanVerCode (file_input, delimiter1,delimiter2):
 	read_file = open(file_input, "r")
 
@@ -1501,46 +1315,6 @@ def CleanVerCode (file_input, delimiter1,delimiter2):
 	
 	return PT_path, PT_sig 
 
-#delimiter1 = r'\[choose_the_appropriated_delimiter.*'
-#delimiter2 = r'.*\..*'
-
-#F1_in = 'from_PT_1st.txt'
-#F2_in = 'from_PT_2nd.txt'
-#F3_in = 'from_PT_3rd.txt'
-#F4_in = 'from_PT_4th.txt'
-#F5_in = 'from_PT_5th.txt' 
-#F6_in = 'from_PT_6th.txt'
-#F7_in = 'from_PT_7th.txt' 
-#F8_in = 'from_PT_8th.txt'
-#F9_in = 'from_PT_9th.txt'
-#F10_in = 'from_PT_10th.txt'
-#F11_in = 'from_PT_11th.txt'
-#F12_in = 'from_PT_A1_A2.txt'
-#F13_in = 'from_PT_A1_A3.txt'
-#F14_in = 'from_PT_A1_A4.txt' 
-#F15_in = 'from_PT_A1_A5.txt'
-#F16_in = 'from_PT_16th.txt'
-#F17_in = 'from_PT_17th.txt'
-
-# call
-#PT_path_1st, PT_sig_1st                                         = CleanVerCode (F1_in ,delimiter1,delimiter2)
-#PT_path_2nd, PT_sig_2nd                                         = CleanVerCode (F2_in ,delimiter1,delimiter2)
-#PT_path_3rd, PT_sig_3rd                                         = CleanVerCode (F3_in ,delimiter1,delimiter2)
-#PT_path_4th, PT_sig_4th                                         = CleanVerCode (F4_in ,delimiter1,delimiter2)
-#PT_path_5th, PT_sig_5th                                         = CleanVerCode (F5_in ,delimiter1,delimiter2)
-#PT_path_6th, PT_sig_6th                                         = CleanVerCode (F6_in ,delimiter1,delimiter2)
-#PT_path_7th, PT_sig_7th                                     = CleanVerCode (F7_in ,delimiter1,delimiter2)
-#PT_path_8th, PT_sig_8th                         = CleanVerCode (F8_in ,delimiter1,delimiter2)
-#PT_path_9th, PT_sig_9th     = CleanVerCode (F9_in ,delimiter1,delimiter2)
-#PT_path_10th, PT_sig_10th               = CleanVerCode (F10_in,delimiter1,delimiter2)
-#PT_path_11th, PT_sig_11th                 = CleanVerCode (F11_in,delimiter1,delimiter2)
-#PT_path_A1_A2, PT_sig_A1_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
-#PT_path_A1_A3, PT_sig_A1_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
-#PT_path_A1_A4, PT_sig_A1_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
-#PT_path_A1_A5, PT_sig_A1_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
-#PT_path_16th, PT_sig_16th             = CleanVerCode (F16_in,delimiter1,delimiter2)
-#PT_path_17th, PT_sig_17th             = CleanVerCode (F17_in,delimiter1,delimiter2)
-# -> file_dirty.txt' -> file_clean.txt
 
 # 1b. 
 # Merges list together in to one & removes r'\s?\n'
@@ -1560,23 +1334,6 @@ def merge_list_to_one (list_of_lists):
 	#print('combined_list \n', combined_list)
 	
 	return combined_list
-
-   
-#list_PT_path_jr = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th]
-#list_PT_sig_jr = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th]
-#list_PT_path_all = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th, 
-#			PT_path_7th, PT_path_8th, PT_path_9th,PT_path_10th, PT_path_11th,
-#			 PT_path_A1_A2, PT_path_A1_A3, PT_path_A1_A4, PT_path_A1_A5,
-#			PT_path_16th, PT_path_17th]
-#list_PT_sig_all = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th,
-#			PT_sig_7th, PT_sig_8th, PT_sig_9th, PT_sig_10th, PT_sig_11th,
-#			 PT_sig_A1_A2, PT_sig_A1_A3, PT_sig_A1_A4, PT_sig_A1_A5,
-#			PT_sig_16th, PT_sig_17th]
-
-#PT_path_jr = merge_list_to_one (list_PT_path_jr)
-#PT_sig_jr = merge_list_to_one (list_PT_sig_jr)
-#PT_path_all = merge_list_to_one (list_PT_path_all)
-#PT_sig_all = merge_list_to_one (list_PT_sig_all)
 
 # 2. ##############################################################################################
 # compares:	'PT_path_jr' with 'VRF_reverse_list' 'PT_sig_jr' with 'list_VRF_small'; 
@@ -1612,46 +1369,6 @@ def list_comparison(list_PT , list_Other, phraseA_NOT1,phraseA_NOT2,phraseB_NOT1
 
 	return 
 
-
-# PT vs VRF+
-# path PT & VRF_reverse
-#phraseA_path_V_NOT1_1      = 'nDIFFERENCE:\npath: '
-#phraseA_path_V_NOT2_1      = 'is in PT_path_jr but not in VRF_reverse_list \n'
-#phraseB_path_V_NOT1_1      = '\nDIFFERENCE:\npath: '
-#phraseB_path_V_NOT2_1      = 'is in VRF_reverse_list but not in PT_path_jr \n'
- 
-#list_comparison (PT_path_jr , VRF_reverse_list,phraseA_path_V_NOT1_1,phraseA_path_V_NOT2_1,phraseB_path_V_NOT1_1,phraseB_path_V_NOT2_1)
-
-
-# sig PT & VRF_sig
-#phraseA_sig_V_NOT1_1      = '\nDIFFERENCE:\nsig: '
-#phraseA_sig_V_NOT2_1      = 'is in PT_sig_jr but not in list_VRF_small \n'
-#phraseB_sig_V_NOT1_1      = '\nDIFFERENCE:\nsig '
-#phraseB_sig_V_NOT2_1      = 'is in list_VRF_small but not in PT_sig_jr \n'
-
-#list_comparison (PT_sig_jr , list_VRF_small,phraseA_sig_V_NOT1_1,phraseA_sig_V_NOT2_1,phraseB_sig_V_NOT1_1,phraseB_sig_V_NOT2_1 )
-
-# --
-# PT vs df_used1+
-# path PT & df_used1_path_all
-#phraseA_path_df1_NOT1_1      = '\nDIFFERENCE:\npath: '
-#phraseA_path_df1_NOT2_1      = 'is in PT_path_all but not in df_used1_path_all \n'
-#phraseB_path_df1_NOT1_1      = '\nDIFFERENCE:\npath: '
-#phraseB_path_df1_NOT2_1      = 'is in df_used1_path_all but not in PT_path_all \n'
-
-#list_comparison (PT_path_all ,df_used1_path_all,phraseA_path_df1_NOT1_1,phraseA_path_df1_NOT2_1,phraseB_path_df1_NOT1_1,phraseB_path_df1_NOT2_1)
-# --
-
-# sig PT & VRF_sig
-#phraseA_sig_df1_NOT1_1      = '\nDIFFERENCE:\nsig: '
-#phraseA_sig_df1_NOT2_1      = 'is in PT_sig_all but not in df_used1_sig_all \n'
-#phraseB_sig_df1_NOT1_1      = '\nDIFFERENCE:\nsig: '
-#phraseB_sig_df1_NOT2_1      = 'is in df_used1_sig_all but not in PT_sig_all \n'
-
-#list_comparison (PT_sig_all , df_used1_sig_all,phraseA_sig_df1_NOT1_1,phraseA_sig_df1_NOT2_1,phraseB_sig_df1_NOT1_1,phraseB_sig_df1_NOT2_1)
-
-
-
 # Ends part v of 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -1682,20 +1399,6 @@ def df_existing_isolates_renames_columns (df, drop_indexes, rename_dict):
 	#print('df: \n',df,'\n\n' )
 
 	return df
-# OTHER
-#drop_indexes_other = [1]
-#rename_dict_other = {'col2_name': 'df_used1 - col2_name','1_hash':'df_used1 -1_hash','S256_COL':'df_used1 -S256_COL'}
-
-#df_all_display = df_existing_isolates_renames_columns (df,drop_indexes_other,rename_dict_other)
-# --
-
-# VRF+
-#drop_indexes_VRF = []
-#rename_dict_VRF = {'File Path': 'VRF+ path','HASH1':'VRF+ sha1'}
-
-#df_VRF_display = df_existing_isolates_renames_columns (df_VRF,drop_indexes_VRF,rename_dict_VRF)
-
-# ---->
 
 # -----------------------------------------------------------------
 # create a dataframe from Lists
@@ -1725,28 +1428,6 @@ def DataFrame_from_lists (Columns, data_list, col_list1):
 	
 	return df
 
-# ----------------------------------------------------------------------------
-# input
-# columns header
-#Columns_jr    = np.array (['PT path', 'PT sha1'])
-
-#  list of lists=[[,,],[,,]..] = each list = values in rows
-#data_list_jr    = np.array ([PT_path_jr,PT_sig_jr])
-
-# call
-#df_PT_jr_display = DataFrame_from_lists (Columns_jr, data_list_jr, PT_path_jr)
-# ---
-
-# input
-# columns header
-#Columns_all    = np.array (['GG_LL col2_name','GG_LL 1_hash'])
-
-#  list of lists=[[,,],[,,]..] = each list = values in rows
-#data_list_all    = np.array ([PT_path_all,PT_sig_all])
-
-# call
-#df_PT_all_display = DataFrame_from_lists (Columns_all, data_list_all, PT_path_all)
-
 # Ends part vi of 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -1768,29 +1449,6 @@ def merge_col_together (df1, df2, add_col):
 
 	return df_Merge
 
-#add_col_V_P = 'sha1 comparisons'
-#df_Verify_PT_merge = merge_col_together (df_VRF_display, df_PT_jr_display, add_col_V_P)
-
-# -
-#add_col_df1_P = 'sha1 comparisons'
-#df_OTHER_PT_merge = merge_col_together (df_all_display, df_PT_all_display, add_col_df1_P)
-
-# -------
-# 1b.def df_to_excel (df, path, sheet, open_): ( Createed at part i, 1c.)
-#path_out_VRF       = 'Verify_vs_PT.xlsx'
-#sheetname_out_VRF  = 'VFP vs PT'
-#open_xlsx_VRF= 0;  # or any if do not want to open
-#df_to_excel (df_Verify_PT_merge, path_out_VRF  , sheetname_out_VRF,open_xlsx_VRF)
-# -
-#path_out_df_used1       = 'FAN_GG_LL.xlsx'
-#sheetname_out_df_used1  = 'FAN & GG_LL'
-#open_xlsx_df_used1= 0;  # or any if do not want to open
-#df_to_excel (df_OTHER_PT_merge, path_out_df_used1 , sheetname_out_df_used1,open_xlsx_df_used1)
-
-
-#print ('=IF(B2=D2,"Match","Fail") -> Verify_vs_PT.xlsx')
-#print ('=IF(C2=F2,"Match","Fail") -> FAN_GG_LL.xlsx')
-
 # Ends part vii of 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
 
@@ -1803,31 +1461,6 @@ def copy_listOFfile_into_dir (file_name_list, path, child_dir):
 	for file in file_name_list:
 		shutil.copy(file, path+child_dir )
 	return
-
-# PT (directory1)
-#file_name_list_sig = ['input_file1']
-#path_current   = os.getcwd()
-#child_dir_sig  = '\\directory1' # ADJUST DIRECTORY & THEREFORE PATH by eliminating the parent directory 'Sig Summaries'
-
-# ADJUST DIRECTORY & THEREFORE PATH
-#copy_listOFfile_into_dir (file_name_list_sig, path_current, child_dir_sig)
-# --
-
-# PT (Sig)
-#file_name_list_var = ['from_PT_1st.txt', 'from_PT_2nd.txt', 'from_PT_3rd.txt',
-#	'from_PT_4th.txt', 'from_PT_5th.txt','from_PT_6th.txt',
-# 	'from_PT_7th.txt', 'from_PT_8th.txt', 'from_PT_9th.txt',
-# 	'from_PT_10th.txt', 'from_PT_11th.txt', 'from_PT_A1_A2.txt',
-# 	'from_PT_A1_A3.txt', 'from_PT_A1_A4.txt', 'from_PT_A1_A5.txt',
-# 	'from_PT_16th.txt', 'from_PT_17th.txt']
-
-#copy_listOFfile_into_dir (file_name_list, child_dir_var, child_dir)
-#path_current      =  os.getcwd()
-#child_dir_var      = '\\directory2'
-
-#copy_listOFfile_into_dir (file_name_list_var, path_current, child_dir_var )
-
-
 # --
 # 1b. 
 # zips 'directory1' & 'directory2'
@@ -1835,9 +1468,6 @@ def ziping_dir (dir):
 	shutil.make_archive(dir, 'zip', dir)
 	
 	return
-
-#ziping_dir ('directory1')
-#ziping_dir ('directory2')
 
 # Ends part viii of 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -2003,26 +1633,27 @@ def df_text ():
 	#-------
 	# 1a. :
 	df_1st,df_2nd,df_3rd,df_4th,df_5th,df_6th,df_7th,df_8th,df_9th,df_10th, \
-			df_11th,df_A1_A2,df_A1_A3,df_A1_A4,df_A1_A5,df_16th,df_17th = manipulate_df_to_PT (df)
+			df_11th,df_root_name_A2,df_root_name_A3,df_root_name_A4,df_root_name_A5,df_16th,df_17th = manipulate_df_to_PT (df)
 	# --
 	# 1b. 
-	write_df_list_to_text (df_1st,                  'col1_name','col2_name','PT_1st.txt'                  , sudo_1st,              open_1st)
-	write_df_list_to_text (df_2nd,                  'col1_name','col2_name','PT_2nd.txt'                  , sudo_2nd,              open_2nd)
-	write_df_list_to_text (df_3rd,                  'col1_name','col2_name','PT_3rd.txt'                  , sudo_3rd,              open_3rd)
-	write_df_list_to_text (df_4th,                  'col1_name','col2_name','PT_4th.txt'                  , sudo_4th,              open_4th)
-	write_df_list_to_text (df_5th,                  'col1_name','col2_name','PT_5th.txt'                  , sudo_5th,              open_5th)
-	write_df_list_to_text (df_6th,                  'col1_name','col2_name','PT_6th.txt'                  , sudo_6th,              open_6th)
-	write_df_list_to_text (df_7th,                'col1_name','col2_name','PT_7th.txt'                , sudo_7th,            open_7th)
-	write_df_list_to_text (df_8th,          'col1_name','col2_name','PT_8th.txt'          , sudo_8th,               open_8th)
-	write_df_list_to_text (df_9th,'col1_name','col2_name','PT_9th.txt', sudo_9th, open_9th)
-	write_df_list_to_text (df_10th,     'col1_name','col2_name','PT_10th.txt'     , sudo_10th,      open_10th)
-	write_df_list_to_text (df_11th,      'col1_name','col2_name','PT_11th.txt'      , sudo_11th,       open_11th)
-	write_df_list_to_text (df_A1_A2,              'col1_name','col2_name','PT_A1_A2.txt'              , sudo_A1_A2,          open_A1_A2)
-	write_df_list_to_text (df_A1_A3,             'col1_name','col2_name','PT_A1_A3.txt'             , sudo_A1_A3,         open_A1_A3)
-	write_df_list_to_text (df_A1_A4,        'col1_name','col2_name','PT_A1_A4.txt'        , sudo_A1_A4,         open_A1_A4)
-	write_df_list_to_text (df_A1_A5,         'col1_name','col2_name','PT_A1_A5.txt'         , sudo_A1_A5,     open_A1_A5)
-	write_df_list_to_text (df_16th,    'col1_name','col2_name','PT_16th.txt'    , sudo_16th,       open_16th)
-	write_df_list_to_text (df_17th,    'col1_name','col2_name','PT_17th.txt'    , sudo_17th,          open_17th)
+
+	write_df_list_to_text (df_1st,         'col1_name','col2_name','PT_1st.txt'          , sudo_1st,            open_1st)
+	write_df_list_to_text (df_2nd,         'col1_name','col2_name','PT_2nd.txt'          , sudo_2nd,            open_2nd)
+	write_df_list_to_text (df_3rd,         'col1_name','col2_name','PT_3rd.txt'          , sudo_3rd,            open_3rd)
+	write_df_list_to_text (df_4th,         'col1_name','col2_name','PT_4th.txt'          , sudo_4th,            open_4th)
+	write_df_list_to_text (df_5th,         'col1_name','col2_name','PT_5th.txt'          , sudo_5th,            open_5th)
+	write_df_list_to_text (df_6th,         'col1_name','col2_name','PT_6th.txt'          , sudo_6th,            open_6th)
+	write_df_list_to_text (df_7th,         'col1_name','col2_name','PT_7th.txt'          , sudo_7th,            open_7th)
+	write_df_list_to_text (df_8th,         'col1_name','col2_name','PT_8th.txt'          , sudo_8th,            open_8th)
+	write_df_list_to_text (df_9th,         'col1_name','col2_name','PT_9th.txt'          , sudo_9th,            open_9th)
+	write_df_list_to_text (df_10th,        'col1_name','col2_name','PT_10th.txt'         , sudo_10th,           open_10th)
+	write_df_list_to_text (df_11th,        'col1_name','col2_name','PT_11th.txt'         , sudo_11th,           open_11th)
+	write_df_list_to_text (df_root_name_A2,'col1_name','col2_name','PT_root_name_A2.txt' , sudo_root_name_A2,   open_root_name_A2)
+	write_df_list_to_text (df_root_name_A3,'col1_name','col2_name','PT_root_name_A3.txt' , sudo_root_name_A3,   open_root_name_A3)
+	write_df_list_to_text (df_root_name_A4,'col1_name','col2_name','PT_root_name_A4.txt' , sudo_root_name_A4,   open_root_name_A4)
+	write_df_list_to_text (df_root_name_A5,'col1_name','col2_name','PT_root_name_A5.txt' , sudo_root_name_A5,   open_root_name_A5)
+	write_df_list_to_text (df_16th,        'col1_name','col2_name','PT_16th.txt'         , sudo_16th,           open_16th)
+	write_df_list_to_text (df_17th,        'col1_name','col2_name','PT_17th.txt'         , sudo_17th,           open_17th)
 	# --
 	
 	print('df.columns: \n', df_1st.columns)
@@ -2037,10 +1668,10 @@ def df_text ():
 	print('9  ','df_9th.shape: ', df_9th.shape)
 	print('10 ','df_10th.shape: ', df_10th.shape)
 	print('11 ','df_11th.shape: ', df_11th.shape)
-	print('12 ','df_A1_A2.shape: ', df_A1_A2.shape)
-	print('13 ','df_A1_A3.shape: ', df_A1_A3.shape)
-	print('14 ','df_A1_A4.shape: ', df_A1_A4.shape)
-	print('15 ','df_A1_A5.shape: ', df_A1_A5.shape)
+	print('12 ','df_root_name_A2.shape: ', df_root_name_A2.shape)
+	print('13 ','df_root_name_A3.shape: ', df_root_name_A3.shape)
+	print('14 ','df_root_name_A4.shape: ', df_root_name_A4.shape)
+	print('15 ','df_root_name_A5.shape: ', df_root_name_A5.shape)
 	print('16 ','df_16th.shape: ', df_16th.shape)
 	print('17 ','df_17th.shape: ', df_17th.shape)
 	print('--- '*5)
@@ -2091,33 +1722,34 @@ def clean_txt_list_n_compare():
 	# part v - Cleans PT text -> creates combine PT list (path_jr, sig_jr, path_all, sig_all)- compares PT vs VFP & df_used1
 	#-------
 	# 1a.
+
 	PT_path_1st, PT_sig_1st                                         = CleanVerCode (F1_in ,delimiter1,delimiter2)
 	PT_path_2nd, PT_sig_2nd                                         = CleanVerCode (F2_in ,delimiter1,delimiter2)
 	PT_path_3rd, PT_sig_3rd                                         = CleanVerCode (F3_in ,delimiter1,delimiter2)
 	PT_path_4th, PT_sig_4th                                         = CleanVerCode (F4_in ,delimiter1,delimiter2)
 	PT_path_5th, PT_sig_5th                                         = CleanVerCode (F5_in ,delimiter1,delimiter2)
 	PT_path_6th, PT_sig_6th                                         = CleanVerCode (F6_in ,delimiter1,delimiter2)
-	PT_path_7th, PT_sig_7th                                     = CleanVerCode (F7_in ,delimiter1,delimiter2)
-	PT_path_8th, PT_sig_8th                         = CleanVerCode (F8_in ,delimiter1,delimiter2)
-	PT_path_9th, PT_sig_9th     = CleanVerCode (F9_in ,delimiter1,delimiter2)
-	PT_path_10th, PT_sig_10th               = CleanVerCode (F10_in,delimiter1,delimiter2)
-	PT_path_11th, PT_sig_11th                 = CleanVerCode (F11_in,delimiter1,delimiter2)
-	PT_path_A1_A2, PT_sig_A1_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
-	PT_path_A1_A3, PT_sig_A1_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
-	PT_path_A1_A4, PT_sig_A1_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
-	PT_path_A1_A5, PT_sig_A1_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
-	PT_path_16th, PT_sig_16th             = CleanVerCode (F16_in,delimiter1,delimiter2)
-	PT_path_17th, PT_sig_17th             = CleanVerCode (F17_in,delimiter1,delimiter2)
+	PT_path_7th, PT_sig_7th                                         = CleanVerCode (F7_in ,delimiter1,delimiter2)
+	PT_path_8th, PT_sig_8th                                         = CleanVerCode (F8_in ,delimiter1,delimiter2)
+	PT_path_9th, PT_sig_9th                                         = CleanVerCode (F9_in ,delimiter1,delimiter2)
+	PT_path_10th, PT_sig_10th                                       = CleanVerCode (F10_in,delimiter1,delimiter2)
+	PT_path_11th, PT_sig_11th                                       = CleanVerCode (F11_in,delimiter1,delimiter2)
+	PT_path_root_name_A2, PT_sig_root_name_A2                       = CleanVerCode (F12_in,delimiter1,delimiter2)
+	PT_path_root_name_A3, PT_sig_root_name_A3                       = CleanVerCode (F13_in,delimiter1,delimiter2)
+	PT_path_root_name_A4, PT_sig_root_name_A4                       = CleanVerCode (F14_in,delimiter1,delimiter2)
+	PT_path_root_name_A5, PT_sig_root_name_A5                       = CleanVerCode (F15_in,delimiter1,delimiter2)
+	PT_path_16th, PT_sig_16th                                       = CleanVerCode (F16_in,delimiter1,delimiter2)
+	PT_path_17th, PT_sig_17th                                       = CleanVerCode (F17_in,delimiter1,delimiter2)
 
 	list_PT_path_jr = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th]
 	list_PT_sig_jr = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th]
 	list_PT_path_all = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th, 
 				PT_path_7th, PT_path_8th, PT_path_9th,PT_path_10th, PT_path_11th,
-				PT_path_A1_A2, PT_path_A1_A3, PT_path_A1_A4, PT_path_A1_A5,
+				PT_path_root_name_A2, PT_path_root_name_A3, PT_path_root_name_A4, PT_path_root_name_A5,
 				PT_path_16th, PT_path_17th]
 	list_PT_sig_all = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th,
 				PT_sig_7th, PT_sig_8th, PT_sig_9th, PT_sig_10th, PT_sig_11th, 
-				PT_sig_A1_A2, PT_sig_A1_A3, PT_sig_A1_A4, PT_sig_A1_A5,
+				PT_sig_root_name_A2, PT_sig_root_name_A3, PT_sig_root_name_A4, PT_sig_root_name_A5,
 				PT_sig_16th, PT_sig_17th]
 	# --
 	# 1b. 
@@ -2191,10 +1823,10 @@ def df_maker():
 	PT_path_9th, PT_sig_9th     = CleanVerCode (F9_in ,delimiter1,delimiter2)
 	PT_path_10th, PT_sig_10th               = CleanVerCode (F10_in,delimiter1,delimiter2)
 	PT_path_11th, PT_sig_11th                 = CleanVerCode (F11_in,delimiter1,delimiter2)
-	PT_path_A1_A2, PT_sig_A1_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
-	PT_path_A1_A3, PT_sig_A1_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
-	PT_path_A1_A4, PT_sig_A1_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
-	PT_path_A1_A5, PT_sig_A1_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
+	PT_path_root_name_A2, PT_sig_root_name_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
+	PT_path_root_name_A3, PT_sig_root_name_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
+	PT_path_root_name_A4, PT_sig_root_name_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
+	PT_path_root_name_A5, PT_sig_root_name_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
 	PT_path_16th, PT_sig_16th             = CleanVerCode (F16_in,delimiter1,delimiter2)
 	PT_path_17th, PT_sig_17th             = CleanVerCode (F17_in,delimiter1,delimiter2)
 
@@ -2202,11 +1834,11 @@ def df_maker():
 	list_PT_sig_jr = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th]
 	list_PT_path_all = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th, 
 				PT_path_7th, PT_path_8th, PT_path_9th,PT_path_10th, PT_path_11th,
-				PT_path_A1_A2, PT_path_A1_A3, PT_path_A1_A4, PT_path_A1_A5,
+				PT_path_root_name_A2, PT_path_root_name_A3, PT_path_root_name_A4, PT_path_root_name_A5,
 				PT_path_16th, PT_path_17th]
 	list_PT_sig_all = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th,
 				PT_sig_7th, PT_sig_8th, PT_sig_9th, PT_sig_10th, PT_sig_11th, 
-				PT_sig_A1_A2, PT_sig_A1_A3, PT_sig_A1_A4, PT_sig_A1_A5,
+				PT_sig_root_name_A2, PT_sig_root_name_A3, PT_sig_root_name_A4, PT_sig_root_name_A5,
 				PT_sig_16th, PT_sig_17th]
 	# --
 	# 1b. 
@@ -2291,6 +1923,7 @@ def df_Merger_n_out():
 	# part v - Cleans PT text -> creates combine PT list (path_jr, sig_jr, path_all, sig_all)- compares PT vs VFP & df_used1
 	#-------
 	# 1a.
+
 	PT_path_1st, PT_sig_1st                                         = CleanVerCode (F1_in ,delimiter1,delimiter2)
 	PT_path_2nd, PT_sig_2nd                                         = CleanVerCode (F2_in ,delimiter1,delimiter2)
 	PT_path_3rd, PT_sig_3rd                                         = CleanVerCode (F3_in ,delimiter1,delimiter2)
@@ -2302,10 +1935,10 @@ def df_Merger_n_out():
 	PT_path_9th, PT_sig_9th     = CleanVerCode (F9_in ,delimiter1,delimiter2)
 	PT_path_10th, PT_sig_10th               = CleanVerCode (F10_in,delimiter1,delimiter2)
 	PT_path_11th, PT_sig_11th                 = CleanVerCode (F11_in,delimiter1,delimiter2)
-	PT_path_A1_A2, PT_sig_A1_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
-	PT_path_A1_A3, PT_sig_A1_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
-	PT_path_A1_A4, PT_sig_A1_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
-	PT_path_A1_A5, PT_sig_A1_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
+	PT_path_root_name_A2, PT_sig_root_name_A2                   = CleanVerCode (F12_in,delimiter1,delimiter2)
+	PT_path_root_name_A3, PT_sig_root_name_A3                   = CleanVerCode (F13_in,delimiter1,delimiter2)
+	PT_path_root_name_A4, PT_sig_root_name_A4                     = CleanVerCode (F14_in,delimiter1,delimiter2)
+	PT_path_root_name_A5, PT_sig_root_name_A5                   = CleanVerCode (F15_in,delimiter1,delimiter2)
 	PT_path_16th, PT_sig_16th             = CleanVerCode (F16_in,delimiter1,delimiter2)
 	PT_path_17th, PT_sig_17th             = CleanVerCode (F17_in,delimiter1,delimiter2)
 
@@ -2313,11 +1946,11 @@ def df_Merger_n_out():
 	list_PT_sig_jr = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th]
 	list_PT_path_all = [PT_path_1st, PT_path_2nd, PT_path_3rd, PT_path_4th, PT_path_5th, PT_path_6th, 
 				PT_path_7th, PT_path_8th, PT_path_9th,PT_path_10th, PT_path_11th,
-				PT_path_A1_A2, PT_path_A1_A3, PT_path_A1_A4, PT_path_A1_A5,
+				PT_path_root_name_A2, PT_path_root_name_A3, PT_path_root_name_A4, PT_path_root_name_A5,
 				PT_path_16th, PT_path_17th]
 	list_PT_sig_all = [PT_sig_1st, PT_sig_2nd, PT_sig_3rd, PT_sig_4th, PT_sig_5th, PT_sig_6th,
 				PT_sig_7th, PT_sig_8th, PT_sig_9th, PT_sig_10th, PT_sig_11th, 
-				PT_sig_A1_A2, PT_sig_A1_A3, PT_sig_A1_A4, PT_sig_A1_A5,
+				PT_sig_root_name_A2, PT_sig_root_name_A3, PT_sig_root_name_A4, PT_sig_root_name_A5,
 				PT_sig_16th, PT_sig_17th]
 	# --
 	# 1b. 
