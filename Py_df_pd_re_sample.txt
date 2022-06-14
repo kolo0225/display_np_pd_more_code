@@ -2000,8 +2000,6 @@ def df_Merger_n_out():
 	print( 'df_OTHER_PT_merge.head(2): \n',df_OTHER_PT_merge.head(2) )	
 	print( 'df_OTHER_PT_merge.tail(2): \n',df_OTHER_PT_merge.tail(2) )
 	print('--- '*5)
-	print ('=IF(B2=D2,"Match","Fail") -> Verify_vs_PT.xlsx')
-	print ('=IF(C2=F2,"Match","Fail") -> FAN_GG_LL.xlsx')
 	print ('\n','part vii '*5, '\n')
 
 	return
